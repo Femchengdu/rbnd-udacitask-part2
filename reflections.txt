@@ -1,13 +1,37 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+
+# I chose the 'table_print' gem.
+
+# I used the gem to create an overview of the list object with selected attributes in a tabular form.
+
 2. Describe the 2 features you added to the project.
   a) Feature 1...
+
+  # I added the 'table_print' gem as the first feature.
+
   b) Feature 2...
+
+  # I wrote a new add method to use the output from the table print gem.
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+
+# A total of 14 hours working on it; about 2 hours a daily.
+
 2. What was the most rewarding challenge you conquered?
+
+# I got stuck early in the project with the 'add' method,
+# so I had to go do some research on arrays to figure out that 'nil' and '""' aren't the same thing in an array.
+
 3. What two additional features did you build? Why?
+
+# I added added the 'table_print' gem because it made manipulating the list object easier.
+
+# I added a second add method that uses the output from the 'table_print' gem.
+
 4. Where do you still have room to grow?
+
+# I need to know when I have reached the limit of my understanding and look for help online. I often  spend way too much time trying to solve a problem on # my own instead of addmitting that I don't quite know what I am doing and need some help

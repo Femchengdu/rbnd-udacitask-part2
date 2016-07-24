@@ -20,6 +20,27 @@ class UdaciList
     @items.delete_at(index - 1)
   end
 
+  # Formats the output from the items selected by type
+  def filter type
+    filtered_items = get_items type
+    unless filtered_items == []
+      formating_title
+      filtered_items.each_with_index do |item, position|
+      puts "#{position + 1} #{item.details}"
+      end
+    else
+      raise UdaciListErrors::InvalidType, "You have entered an invalid type!"
+    end
+  end
+
+  # Selects items from the items array by type
+  def get_items type
+    @items.select do |item|
+      item.type == type
+    end
+  end
+
+  # Format the title
   def formating_title
     unless @title == nil
       puts "-" * @title.length
@@ -31,11 +52,16 @@ class UdaciList
       puts " "
     end
   end
-  
+  # Listing the items
   def all 
     formating_title
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      puts "#{position + 1} #{item.details}"
     end
+  end
+  # Listing the items using 'table_print' to format the output
+  def all_with_table_print
+    formating_title
+    tp @items, "type", "description"
   end
 end
