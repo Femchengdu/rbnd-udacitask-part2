@@ -46,3 +46,20 @@ list.all
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
  new_list.filter("event")
+
+# DEMO 1. USING 'table_print'
+# -------------------------------
+  # Using table_print with a filter
+  new_list.filtered_items_with_table_print "event"
+
+# DEMO 2. DELETING MULTIPLE ITEMS
+# --------------------------------
+  new_list.delete_multiple(3,5) 
+  # Print the list
+  new_list.all 
+
+# DEMO 3. Changing todo priority with two arguments index and new priority level
+# --------------------------------  
+  new_list.change_priority 1, "high"
+  # Print the list
+  new_list.all

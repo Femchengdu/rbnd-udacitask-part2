@@ -9,17 +9,17 @@
 2. Describe the 2 features you added to the project.
   a) Feature 1...
 
-  # I added the 'table_print' gem as the first feature.
+  # I added a method to delete multiple items and from the list.
 
   b) Feature 2...
 
-  # I wrote a new add method to use the output from the table print gem.
+  # I wrote a new method to change the priority of a todo item.
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
 
-# A total of 14 hours working on it; about 2 hours a daily.
+# A total of 14 hours working on it; about 2 hours daily.
 
 2. What was the most rewarding challenge you conquered?
 
@@ -28,9 +28,9 @@
 
 3. What two additional features did you build? Why?
 
-# I added added the 'table_print' gem because it made manipulating the list object easier.
+# I added the change priority method to make it easier for the user to modify a todo item as his or her priorities change.
 
-# I added a second add method that uses the output from the 'table_print' gem.
+# I added a second method to delete multiple items from the list as a means to make it faster and easier to manage the list.
 
 4. Where do you still have room to grow?
 

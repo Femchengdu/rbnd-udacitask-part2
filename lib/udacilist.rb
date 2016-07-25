@@ -20,6 +20,13 @@ class UdaciList
     @items.delete_at(index - 1)
   end
 
+# Delete multiple items method
+  def delete_multiple(*index)
+    index_array = *index
+    raise UdaciListErrors::IndexExceedsListSize, "You have entered an invalid index!" if index_array.include? @items.count + 1
+    @items.delete_if.with_index {|_, index| index_array.include? index + 1}
+  end
+
   # Formats the output from the items selected by type
   def filter type
     filtered_items = get_items type
@@ -40,6 +47,18 @@ class UdaciList
     end
   end
 
+  # Get the item by index
+  def get_item_by_index value
+    @items[value - 1]
+  end
+
+  # Change Priority method
+  def change_priority index, priority
+   todo_item = get_item_by_index index
+   todo_item.set_priority priority
+  end
+
+
   # Format the title
   def formating_title
     unless @title == nil
@@ -59,9 +78,17 @@ class UdaciList
       puts "#{position + 1} #{item.details}"
     end
   end
-  # Listing the items using 'table_print' to format the output
+  # Listing the items using 'table_print' to format the output without a filter
   def all_with_table_print
     formating_title
-    tp @items, "type", "description"
+    tp @items
+  end
+
+  # Listing the items using 'tabe_print' and a filter
+
+  def filtered_items_with_table_print type
+    formating_title
+    filtered_items = get_items type
+    tp filtered_items, "details", "type", "start_date", "end_date"
   end
 end
